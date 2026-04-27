@@ -823,6 +823,10 @@ alias alloc-prof := alloc-profile
 alloc-profile:
   cargo run --example alloc_profile -p harper-core --release
 
+# Run native benchmarks.
+bench:
+  cargo bench
+
 # Build harper-wasm with bench support and run the WASM benchmark harness.
 # Runs wasm-opt by default to match the shipping build; set DISABLE_WASM_OPT=1
 # to skip it (faster rebuilds, non-shipping numbers).
